@@ -58,6 +58,8 @@ protected:
 	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
 	// End of APawn interface
 
+	void shootBullet();
+
 public:
 	AInvictusCharacter();
 

@@ -6,7 +6,6 @@
 #include "Components/ActorComponent.h"
 #include "shoot.generated.h"
 
-
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class INVICTUS_API Ushoot : public UActorComponent
 {

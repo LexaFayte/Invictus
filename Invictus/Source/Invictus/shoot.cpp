@@ -2,7 +2,6 @@
 
 #include "shoot.h"
 
-
 // Sets default values for this component's properties
 Ushoot::Ushoot()
 {
@@ -30,5 +29,6 @@ void Ushoot::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponent
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
 	// ...
+	
 }
 
