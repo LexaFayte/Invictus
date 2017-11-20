@@ -29,6 +29,16 @@ void Ushoot::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponent
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
 	// ...
+	if (fire)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("BANG!"));
+		fire = false;
+	}
 	
+}
+
+void Ushoot::fireProjectile()
+{
+	fire = true;
 }
 

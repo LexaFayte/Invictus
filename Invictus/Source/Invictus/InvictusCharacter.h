@@ -4,7 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "PaperCharacter.h"
+#include "shoot.h"
 #include "InvictusCharacter.generated.h"
+
 
 class UTextRenderComponent;
 
@@ -67,4 +69,7 @@ public:
 	FORCEINLINE class UCameraComponent* GetSideViewCameraComponent() const { return SideViewCameraComponent; }
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
+
+private:
+	Ushoot* shootComponent;
 };

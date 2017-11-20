@@ -163,5 +163,11 @@ void AInvictusCharacter::UpdateCharacter()
 void AInvictusCharacter::shootBullet()
 {
 	UE_LOG(LogTemp, Warning, TEXT("in the shooting function! Your keybinding worked"));
-	
+
+	if (!shootComponent)
+	{
+		shootComponent = FindComponentByClass<Ushoot>();
+	}
+
+	shootComponent->fireProjectile();
 }

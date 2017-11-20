@@ -59,7 +59,10 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(Ushoot); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(Ushoot)
 
 
-#define Invictus_Source_Invictus_shoot_h_12_PRIVATE_PROPERTY_OFFSET
+#define Invictus_Source_Invictus_shoot_h_12_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__BulletFB() { return STRUCT_OFFSET(Ushoot, BulletFB); }
+
+
 #define Invictus_Source_Invictus_shoot_h_9_PROLOG
 #define Invictus_Source_Invictus_shoot_h_12_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

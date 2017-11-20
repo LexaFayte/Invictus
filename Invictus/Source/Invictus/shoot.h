@@ -15,14 +15,20 @@ public:
 	// Sets default values for this component's properties
 	Ushoot();
 
+	void fireProjectile();
+
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
+	// The animation to play while running around
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations)
+		class UPaperFlipbook* BulletFB;
+
 public:	
 	// Called every frame
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;	
+	bool fire = false;
 
-		
-	
+
 };

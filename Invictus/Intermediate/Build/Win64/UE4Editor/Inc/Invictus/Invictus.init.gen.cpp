@@ -19,8 +19,8 @@ void EmptyLinkFunctionForGeneratedCodeInvictus_init() {}
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/Invictus",
 				PKG_CompiledIn | 0x00000000,
-				0xB282B900,
-				0xA1812BE6,
+				0xBA8893B8,
+				0x27888125,
 				nullptr, 0,
 				METADATA_PARAMS(nullptr, 0)
 			};

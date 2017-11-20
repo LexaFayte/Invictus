@@ -13,9 +13,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define INVICTUS_InvictusCharacter_generated_h
 
-#define Invictus_Source_Invictus_InvictusCharacter_h_22_RPC_WRAPPERS
-#define Invictus_Source_Invictus_InvictusCharacter_h_22_RPC_WRAPPERS_NO_PURE_DECLS
-#define Invictus_Source_Invictus_InvictusCharacter_h_22_INCLASS_NO_PURE_DECLS \
+#define Invictus_Source_Invictus_InvictusCharacter_h_24_RPC_WRAPPERS
+#define Invictus_Source_Invictus_InvictusCharacter_h_24_RPC_WRAPPERS_NO_PURE_DECLS
+#define Invictus_Source_Invictus_InvictusCharacter_h_24_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAInvictusCharacter(); \
 	friend INVICTUS_API class UClass* Z_Construct_UClass_AInvictusCharacter(); \
@@ -27,7 +27,7 @@ public: \
 
 
 
-#define Invictus_Source_Invictus_InvictusCharacter_h_22_INCLASS \
+#define Invictus_Source_Invictus_InvictusCharacter_h_24_INCLASS \
 private: \
 	static void StaticRegisterNativesAInvictusCharacter(); \
 	friend INVICTUS_API class UClass* Z_Construct_UClass_AInvictusCharacter(); \
@@ -39,7 +39,7 @@ public: \
 
 
 
-#define Invictus_Source_Invictus_InvictusCharacter_h_22_STANDARD_CONSTRUCTORS \
+#define Invictus_Source_Invictus_InvictusCharacter_h_24_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AInvictusCharacter(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AInvictusCharacter) \
@@ -52,7 +52,7 @@ private: \
 public:
 
 
-#define Invictus_Source_Invictus_InvictusCharacter_h_22_ENHANCED_CONSTRUCTORS \
+#define Invictus_Source_Invictus_InvictusCharacter_h_24_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AInvictusCharacter(AInvictusCharacter&&); \
@@ -63,32 +63,32 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AInvictusCharacter); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AInvictusCharacter)
 
 
-#define Invictus_Source_Invictus_InvictusCharacter_h_22_PRIVATE_PROPERTY_OFFSET \
+#define Invictus_Source_Invictus_InvictusCharacter_h_24_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__SideViewCameraComponent() { return STRUCT_OFFSET(AInvictusCharacter, SideViewCameraComponent); } \
 	FORCEINLINE static uint32 __PPO__CameraBoom() { return STRUCT_OFFSET(AInvictusCharacter, CameraBoom); } \
 	FORCEINLINE static uint32 __PPO__RunningAnimation() { return STRUCT_OFFSET(AInvictusCharacter, RunningAnimation); } \
 	FORCEINLINE static uint32 __PPO__IdleAnimation() { return STRUCT_OFFSET(AInvictusCharacter, IdleAnimation); }
 
 
-#define Invictus_Source_Invictus_InvictusCharacter_h_19_PROLOG
-#define Invictus_Source_Invictus_InvictusCharacter_h_22_GENERATED_BODY_LEGACY \
+#define Invictus_Source_Invictus_InvictusCharacter_h_21_PROLOG
+#define Invictus_Source_Invictus_InvictusCharacter_h_24_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Invictus_Source_Invictus_InvictusCharacter_h_22_PRIVATE_PROPERTY_OFFSET \
-	Invictus_Source_Invictus_InvictusCharacter_h_22_RPC_WRAPPERS \
-	Invictus_Source_Invictus_InvictusCharacter_h_22_INCLASS \
-	Invictus_Source_Invictus_InvictusCharacter_h_22_STANDARD_CONSTRUCTORS \
+	Invictus_Source_Invictus_InvictusCharacter_h_24_PRIVATE_PROPERTY_OFFSET \
+	Invictus_Source_Invictus_InvictusCharacter_h_24_RPC_WRAPPERS \
+	Invictus_Source_Invictus_InvictusCharacter_h_24_INCLASS \
+	Invictus_Source_Invictus_InvictusCharacter_h_24_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Invictus_Source_Invictus_InvictusCharacter_h_22_GENERATED_BODY \
+#define Invictus_Source_Invictus_InvictusCharacter_h_24_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Invictus_Source_Invictus_InvictusCharacter_h_22_PRIVATE_PROPERTY_OFFSET \
-	Invictus_Source_Invictus_InvictusCharacter_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
-	Invictus_Source_Invictus_InvictusCharacter_h_22_INCLASS_NO_PURE_DECLS \
-	Invictus_Source_Invictus_InvictusCharacter_h_22_ENHANCED_CONSTRUCTORS \
+	Invictus_Source_Invictus_InvictusCharacter_h_24_PRIVATE_PROPERTY_OFFSET \
+	Invictus_Source_Invictus_InvictusCharacter_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
+	Invictus_Source_Invictus_InvictusCharacter_h_24_INCLASS_NO_PURE_DECLS \
+	Invictus_Source_Invictus_InvictusCharacter_h_24_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
