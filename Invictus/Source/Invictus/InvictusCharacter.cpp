@@ -9,6 +9,7 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/Controller.h"
 #include "Camera/CameraComponent.h"
+#include "Engine/World.h"
 
 DEFINE_LOG_CATEGORY_STATIC(SideScrollerCharacter, Log, All);
 
@@ -112,6 +113,9 @@ void AInvictusCharacter::SetupPlayerInputComponent(class UInputComponent* Player
 
 	PlayerInputComponent->BindTouch(IE_Pressed, this, &AInvictusCharacter::TouchStarted);
 	PlayerInputComponent->BindTouch(IE_Released, this, &AInvictusCharacter::TouchStopped);
+
+	//shoost the bullet
+	PlayerInputComponent->BindAction("Shoot", IE_Pressed, this, &AInvictusCharacter::shootBullet);
 }
 
 void AInvictusCharacter::MoveRight(float Value)
@@ -154,4 +158,10 @@ void AInvictusCharacter::UpdateCharacter()
 			Controller->SetControlRotation(FRotator(0.0f, 0.0f, 0.0f));
 		}
 	}
+}
+
+void AInvictusCharacter::shootBullet()
+{
+	UE_LOG(LogTemp, Warning, TEXT("in the shooting function! Your keybinding worked"));
+	
 }
