@@ -1,70 +1,63 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<ItemGroup>
-		<None Include="..\..\Invictus.uproject" />
-		<Filter Include="Source">
-			<UniqueIdentifier>{815A718A-3E13-4192-9B4C-B1FD2551C17D}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Source\Invictus.Target.cs">
-			<Filter>Source</Filter>
-		</None >
-		<None Include="..\..\Source\InvictusEditor.Target.cs">
-			<Filter>Source</Filter>
-		</None >
-		<Filter Include="Config">
-			<UniqueIdentifier>{39B0ED47-2686-4C11-8F21-46DD5236371E}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Config\DefaultEditor.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultEngine.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultGame.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultInput.ini">
-			<Filter>Config</Filter>
-		</None >
-		<Filter Include="Source\Invictus">
-			<UniqueIdentifier>{4F4C8372-8A0F-4830-A99E-B5BF21251F7F}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Source\Invictus\Invictus.Build.cs">
-			<Filter>Source\Invictus</Filter>
-		</None >
-		<ClCompile Include="..\..\Source\Invictus\Invictus.cpp">
-			<Filter>Source\Invictus</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\Invictus\Invictus.h">
-			<Filter>Source\Invictus</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\Invictus\InvictusCharacter.cpp">
-			<Filter>Source\Invictus</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\Invictus\InvictusCharacter.h">
-			<Filter>Source\Invictus</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\Invictus\InvictusGameMode.cpp">
-			<Filter>Source\Invictus</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\Invictus\InvictusGameMode.h">
-			<Filter>Source\Invictus</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\Invictus\shoot.cpp">
-			<Filter>Source\Invictus</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\Invictus\shoot.h">
-			<Filter>Source\Invictus</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\Invictus\testBullet.cpp">
-			<Filter>Source\Invictus</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\Invictus\testBullet.h">
-			<Filter>Source\Invictus</Filter>
-		</ClInclude >
-	</ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Invictus.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{8184324E-2121-43BE-B827-9007D2CA8EAC}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Invictus.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\InvictusEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{0D35385D-42E5-4BA1-9F7D-370B4CB0ECAA}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\Invictus">
+      <UniqueIdentifier>{165513BD-CBB9-4483-AD5A-69C8F0DDA972}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Invictus\Invictus.Build.cs">
+      <Filter>Source\Invictus</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\Invictus\Invictus.cpp">
+      <Filter>Source\Invictus</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Invictus\Invictus.h">
+      <Filter>Source\Invictus</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Invictus\InvictusCharacter.cpp">
+      <Filter>Source\Invictus</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Invictus\InvictusCharacter.h">
+      <Filter>Source\Invictus</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Invictus\InvictusGameMode.cpp">
+      <Filter>Source\Invictus</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Invictus\InvictusGameMode.h">
+      <Filter>Source\Invictus</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Invictus\shoot.cpp">
+      <Filter>Source\Invictus</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Invictus\shoot.h">
+      <Filter>Source\Invictus</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>

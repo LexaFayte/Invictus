@@ -169,5 +169,5 @@ void AInvictusCharacter::shootBullet()
 		shootComponent = FindComponentByClass<Ushoot>();
 	}
 
-	shootComponent->fireProjectile();
+	shootComponent->fireProjectile(1.0f);
 }

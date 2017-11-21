@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeshoot() {}
 	INVICTUS_API UClass* Z_Construct_UClass_Ushoot();
 	ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
 	UPackage* Z_Construct_UPackage__Script_Invictus();
+	ENGINE_API UClass* Z_Construct_UClass_UBlueprint_NoRegister();
 	PAPER2D_API UClass* Z_Construct_UClass_UPaperFlipbook_NoRegister();
 // End Cross Module References
 	void Ushoot::StaticRegisterNativesUshoot()
@@ -44,6 +45,13 @@ void EmptyLinkFunctionForGeneratedCodeshoot() {}
 			};
 #endif
 #if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bullet_MetaData[] = {
+				{ "Category", "BlueprintObj" },
+				{ "ModuleRelativePath", "shoot.h" },
+			};
+#endif
+			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_bullet = { UE4CodeGen_Private::EPropertyClass::Object, "bullet", RF_Public|RF_Transient|RF_MarkAsNative, 0x0020080000000005, 1, nullptr, STRUCT_OFFSET(Ushoot, bullet), Z_Construct_UClass_UBlueprint_NoRegister, METADATA_PARAMS(NewProp_bullet_MetaData, ARRAY_COUNT(NewProp_bullet_MetaData)) };
+#if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BulletFB_MetaData[] = {
 				{ "Category", "Animations" },
 				{ "ModuleRelativePath", "shoot.h" },
@@ -52,6 +60,7 @@ void EmptyLinkFunctionForGeneratedCodeshoot() {}
 #endif
 			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_BulletFB = { UE4CodeGen_Private::EPropertyClass::Object, "BulletFB", RF_Public|RF_Transient|RF_MarkAsNative, 0x0020080000000005, 1, nullptr, STRUCT_OFFSET(Ushoot, BulletFB), Z_Construct_UClass_UPaperFlipbook_NoRegister, METADATA_PARAMS(NewProp_BulletFB_MetaData, ARRAY_COUNT(NewProp_BulletFB_MetaData)) };
 			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_bullet,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_BulletFB,
 			};
 			static const FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -72,7 +81,7 @@ void EmptyLinkFunctionForGeneratedCodeshoot() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(Ushoot, 3995864483);
+	IMPLEMENT_CLASS(Ushoot, 2871540972);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_Ushoot(Z_Construct_UClass_Ushoot, &Ushoot::StaticClass, TEXT("/Script/Invictus"), TEXT("Ushoot"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(Ushoot);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

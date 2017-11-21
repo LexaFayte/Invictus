@@ -1,6 +1,6 @@
 // Fill out your copyright notice in the Description page of Project Settings.
-
 #include "shoot.h"
+#include "Engine/World.h"
 
 // Sets default values for this component's properties
 Ushoot::Ushoot()
@@ -33,12 +33,12 @@ void Ushoot::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponent
 	{
 		UE_LOG(LogTemp, Warning, TEXT("BANG!"));
 		fire = false;
-	}
-	
+	}	
 }
 
-void Ushoot::fireProjectile()
+void Ushoot::fireProjectile(float x_dir)
 {
+	shotDir = x_dir;
 	fire = true;
 }
 

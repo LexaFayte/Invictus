@@ -60,7 +60,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(Ushoot); \
 
 
 #define Invictus_Source_Invictus_shoot_h_12_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__BulletFB() { return STRUCT_OFFSET(Ushoot, BulletFB); }
+	FORCEINLINE static uint32 __PPO__BulletFB() { return STRUCT_OFFSET(Ushoot, BulletFB); } \
+	FORCEINLINE static uint32 __PPO__bullet() { return STRUCT_OFFSET(Ushoot, bullet); }
 
 
 #define Invictus_Source_Invictus_shoot_h_9_PROLOG
