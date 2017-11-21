@@ -1,5 +1,2 @@
 # Invictus
-2D Unreal game;
-Space themed bullet hell.
-
-Unreal ver. 4.18.1
+Game Maker Studio, 2D space themed bullet hell
