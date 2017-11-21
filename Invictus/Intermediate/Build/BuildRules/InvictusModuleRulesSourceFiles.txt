@@ -1,3 +1,0 @@
-A:\Unreal Engine Programming\Invictus\Invictus\Source\Invictus\Invictus.Build.cs
-A:\Unreal Engine Programming\Invictus\Invictus\Source\Invictus.Target.cs
-A:\Unreal Engine Programming\Invictus\Invictus\Source\InvictusEditor.Target.cs
