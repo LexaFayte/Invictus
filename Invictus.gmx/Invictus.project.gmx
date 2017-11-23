@@ -17,6 +17,7 @@
   <objects name="objects">
     <object>objects\PlayerShip</object>
     <object>objects\bullet01</object>
+    <object>objects\sys_system</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\TestSpaceLevel</room>
