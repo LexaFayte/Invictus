@@ -52,7 +52,7 @@
 inst = instance_create(x+16,y,bullet01);
 with(inst)
 {
-    speed = 5;
+    speed = 15;
     direction = 0;
 }
 </string>
