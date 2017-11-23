@@ -5,9 +5,22 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprite>sprites\tempShip</sprite>
+    <sprite>sprites\bullet01Sprite</sprite>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\testScript.gml</script>
+  </scripts>
+  <objects name="objects">
+    <object>objects\PlayerShip</object>
+    <object>objects\bullet01</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\TestSpaceLevel</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
