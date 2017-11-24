@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>dir = 0;
+            <string>///set creation vars
+dir = 0;
+hp = 10;
 </string>
           </argument>
         </arguments>
@@ -48,12 +50,53 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var inst;
-inst = instance_create(x+16,y,bullet01);
+            <string>var bulletDir = dir;//dirction of ths ship currently
+var speedMultiplier;//multiplier for bullet directional speed
+var xMod;//modifies the spawn position of the bullet
+
+if(dir == 0)
+{
+    speedMultiplier = 1;
+    xMod = 16; 
+}
+else
+{
+    speedMultiplier = -1;
+    xMod = -48;
+}
+
+var inst;
+inst = instance_create(x+xMod,y,bullet01);
 with(inst)
 {
-    speed = 15;
-    direction = 0;
+    speed = 15 * speedMultiplier;
+    direction = bulletDir;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(hp &lt;= 0)
+{
+    instance_destroy();
 }
 </string>
           </argument>
@@ -81,7 +124,7 @@ with(inst)
           </argument>
           <argument>
             <kind>0</kind>
-            <string>-3</string>
+            <string>-5</string>
           </argument>
         </arguments>
       </action>
@@ -107,7 +150,7 @@ with(inst)
           </argument>
           <argument>
             <kind>0</kind>
-            <string>3</string>
+            <string>5</string>
           </argument>
         </arguments>
       </action>
@@ -129,11 +172,36 @@ with(inst)
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>3</string>
+            <string>5</string>
           </argument>
           <argument>
             <kind>0</kind>
             <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(dir != 0)
+{
+    dir = 0;
+    image_xscale *=-1;
+}
+</string>
           </argument>
         </arguments>
       </action>
@@ -155,11 +223,36 @@ with(inst)
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>-3</string>
+            <string>-5</string>
           </argument>
           <argument>
             <kind>0</kind>
             <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(dir != -1)
+{
+    dir = -1;
+    image_xscale *=-1;
+}
+</string>
           </argument>
         </arguments>
       </action>
@@ -181,7 +274,7 @@ with(inst)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (alarm[0] = -1) alarm = 3;
+            <string>if (alarm[0] == -1) alarm = 3;
 </string>
           </argument>
         </arguments>
