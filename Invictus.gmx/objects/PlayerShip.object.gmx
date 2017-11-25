@@ -55,9 +55,10 @@ movespeed = 5;
 var speedMultiplier;//multiplier for bullet directional speed
 var xMod;//modifies the spawn position of the bullet
 
-if(dir == 0)
+if(dir == 0 || dir == 1)
 {
     speedMultiplier = 1;
+    bulletDir = 0;
     xMod = 16; 
 }
 else
@@ -100,7 +101,7 @@ with(inst)
     instance_destroy();
 }
 
-//if (gamepad_is_connected(0)) { scr_sys_controller(); }
+if (gamepad_is_connected(0)) { scr_sys_controller(); }
 </string>
           </argument>
         </arguments>
