@@ -9,6 +9,10 @@
     <sprite>sprites\tempShip</sprite>
     <sprite>sprites\bullet01Sprite</sprite>
     <sprite>sprites\sprite2</sprite>
+    <sprite>sprites\sprPlayerShipTemplate</sprite>
+    <sprite>sprites\PlayerShipA</sprite>
+    <sprite>sprites\sprPickupHealth</sprite>
+    <sprite>sprites\sprPlaceholder</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths">
@@ -16,12 +20,17 @@
   </paths>
   <scripts name="scripts">
     <script>scripts\testScript.gml</script>
+    <script>scripts\scr_sys_controller.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\PlayerShip</object>
     <object>objects\bullet01</object>
     <object>objects\sys_system</object>
     <object>objects\Enemy01</object>
+    <objects name="items">
+      <object>objects\objPickup</object>
+      <object>objects\pickupHealth</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\TestSpaceLevel</room>
