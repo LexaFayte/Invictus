@@ -28,7 +28,9 @@
             <string>///set creation vars
 dir = 0;
 hp = 10;
-movespeed = 5;
+movespeed = 15;
+width = 32;
+height = 32;
 </string>
           </argument>
         </arguments>
@@ -102,6 +104,44 @@ with(inst)
 }
 
 if (gamepad_is_connected(0)) { scr_sys_controller(); }
+
+var levelWidth = 2048;
+var levelHeight = 768;
+//view follow player
+view_hborder[0] = view_wview[0] / 2;
+view_vborder[0] = view_hview[0] / 2;
+
+/*
+=======================
+    bounds checking
+=======================    
+*/
+var offsetY = height/2 + 5;
+var offsetX =  width/2 + 5;
+
+//horizontal wrapping
+if(x &gt;= levelWidth)
+{
+    view_xview[0] = 0;
+    x = offsetX;   
+}
+else if(x &lt;= 0)
+{
+    view_xview[0] = view_wview[0] * 1.5;
+    x = levelWidth - offsetX;
+}
+
+//vertical bounds
+if( levelHeight - offsetY &lt; y)
+{
+    y =  levelHeight - offsetY;
+}
+
+if(y - offsetY &lt; 0)
+{
+    y = offsetY;
+}
+
 </string>
           </argument>
         </arguments>
@@ -129,6 +169,31 @@ if (gamepad_is_connected(0)) { scr_sys_controller(); }
           <argument>
             <kind>0</kind>
             <string>-5</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="5" enumb="86">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>view_visible[0] = !view_visible[0];
+view_visible[2] = !view_visible[2];
+
+</string>
           </argument>
         </arguments>
       </action>
@@ -301,9 +366,7 @@ if (gamepad_is_connected(0)) { scr_sys_controller(); }
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-
-draw_self();
+            <string>draw_self();
 </string>
           </argument>
         </arguments>
