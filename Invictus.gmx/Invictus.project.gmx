@@ -22,6 +22,9 @@
     <script>scripts\testScript.gml</script>
     <script>scripts\scr_sys_controller.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt01</font>
+  </fonts>
   <objects name="objects">
     <object>objects\PlayerShip</object>
     <object>objects\bullet01</object>
