@@ -8,7 +8,7 @@
   <parentName>objPickup</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="8" enumb="0">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,13 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Set animation speed to half normal playback rate
-image_speed = 0.5;
-
-// Slowly rotate the image
-image_angle += 0.25;
-
-draw_self();
+            <string>scr_pickup_init(1, 0, 0, 0)
 </string>
           </argument>
         </arguments>

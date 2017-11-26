@@ -7,32 +7,53 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\tempShip</sprite>
-    <sprite>sprites\bullet01Sprite</sprite>
+    <sprite>sprites\sprBullet</sprite>
     <sprite>sprites\sprite2</sprite>
+    <sprite>sprites\sprite3</sprite>
     <sprite>sprites\sprPlayerShipTemplate</sprite>
     <sprite>sprites\PlayerShipA</sprite>
     <sprite>sprites\sprPickupHealth</sprite>
+    <sprite>sprites\sprPickupCash</sprite>
     <sprite>sprites\sprPlaceholder</sprite>
+    <sprite>sprites\sprTorpedo</sprite>
+    <sprite>sprites\explosionTorpedo</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
   </backgrounds>
   <paths name="paths">
+    <path>paths\testEnemyPath2</path>
     <path>paths\testEnemyPath</path>
   </paths>
   <scripts name="scripts">
     <script>scripts\testScript.gml</script>
     <script>scripts\scr_sys_controller.gml</script>
+    <script>scripts\scr_ship_init.gml</script>
+    <script>scripts\scr_pickup_init.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt01</font>
+  </fonts>
   <objects name="objects">
-    <object>objects\PlayerShip</object>
-    <object>objects\bullet01</object>
     <object>objects\sys_system</object>
-    <object>objects\Enemy01</object>
+    <objects name="ships">
+      <object>objects\parentEnemyShip</object>
+      <object>objects\PlayerShip</object>
+      <object>objects\Enemy01</object>
+      <object>objects\Enemy02</object>
+    </objects>
+    <objects name="weapons">
+      <object>objects\weaponTorpedoE</object>
+      <object>objects\weaponTorpedoBlast</object>
+      <object>objects\weaponBulletE</object>
+      <object>objects\weaponBulletP</object>
+    </objects>
     <objects name="items">
       <object>objects\objPickup</object>
       <object>objects\pickupHealth</object>
+      <object>objects\pickupCash</object>
     </objects>
+    <object>objects\enemySpawn</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\TestSpaceLevel</room>

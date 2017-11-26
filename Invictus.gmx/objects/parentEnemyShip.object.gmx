@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="4" ename="PlayerShip">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,20 +25,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Picked up by Player
-if (health != 0) PlayerShip.hp = PlayerShip.hp_max;
-PlayerShip.cash += cashStash;
-if (weapon != 0) PlayerShip.weapon = weapon;
-if (shield != 0) PlayerShip.shield = shield;
+            <string>scr_ship_init(2, 6, weaponBulletE, 5);
 
-// Destroy self on pickup
-instance_destroy();
+/*
+hp = 2;
+movespeed = 6;
+alarm[1] = 5;*/
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event eventtype="2" enumb="1">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -55,16 +53,60 @@ instance_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Set animation speed to half normal playback rate
-image_speed = 0.5;
+            <string>var inst;
+inst = instance_create(x-16,y,weapon);
+with(inst)
+{
+    speed = -15;
+    direction = -1;
+}
 
-// Slowly rotate the image
-image_angle += 0.25;
-
-draw_self();
+alarm[1] = movespeed;
 </string>
           </argument>
         </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(hp &lt;= 0)
+{
+    instance_destroy();
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="8">
+      <action>
+        <libid>1</libid>
+        <id>203</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_kill_object</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
   </events>
