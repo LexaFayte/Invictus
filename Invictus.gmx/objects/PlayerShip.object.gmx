@@ -28,7 +28,12 @@
             <string>///set creation vars
 dir = 0;
 hp = 10;
+hp_max = 10;
 movespeed = 5;
+weapon = weaponBulletP;
+state = 'okay';
+cash = 0;
+invulnerability_timer = 3; // seconds
 
 gp_up = 0;
 gp_down = 0;
@@ -37,6 +42,34 @@ gp_down = 0;
 // Set these to 0 to disable debug text
 debug_controller = 1;
 debug_stats = 1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Player is invulnerable when struck
+
+if (state == 'invulnerable')
+{
+    state = 'okay';
+}
 </string>
           </argument>
         </arguments>
@@ -76,7 +109,7 @@ else
 }
 
 var inst;
-inst = instance_create(x+xMod,y,bullet01);
+inst = instance_create(x+xMod,y,weapon);
 with(inst)
 {
     speed = 15 * speedMultiplier;
@@ -358,8 +391,9 @@ draw_set_colour(c_white);
 if (debug_stats != 0)
 {
     draw_text(300, 10, "dir :: " + string(dir));
-    draw_text(300, 20, "hp :: " + string(hp));
-    draw_text(300, 40, "movespeed :: " + string(movespeed));
+    draw_text(300, 30, "hp :: " + string(hp));
+    draw_text(300, 50, "movespeed :: " + string(movespeed));
+    draw_text(300, 70, "cash :: " + string(cash));
 }
 </string>
           </argument>
@@ -384,6 +418,38 @@ if (debug_stats != 0)
             <string>/// Draw Self (should be last code action)
 
 draw_self();
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Player Colour Overlay
+
+// If player is fine, no colour blend
+switch (state) {
+case 'okay':
+    image_blend = -1;
+    break;
+case 'invulnerable':
+    image_blend = c_red;
+    break;
+}
+
 </string>
           </argument>
         </arguments>
