@@ -28,48 +28,9 @@
             <string>///set creation vars
 dir = 0;
 hp = 10;
-hp_max = 10;
-movespeed = 5;
-weapon = weaponBulletP;
-state = 'okay';
-cash = 0;
-invulnerability_timer = 3; // seconds
-
-gp_up = 0;
-gp_down = 0;
-
-
-// Set these to 0 to disable debug text
-debug_controller = 1;
-debug_stats = 1;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="1">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Player is invulnerable when struck
-
-if (state == 'invulnerable')
-{
-    state = 'okay';
-}
+movespeed = 15;
+width = 32;
+height = 32;
 </string>
           </argument>
         </arguments>
@@ -109,7 +70,7 @@ else
 }
 
 var inst;
-inst = instance_create(x+xMod,y,weapon);
+inst = instance_create(x+xMod,y,bullet01);
 with(inst)
 {
     speed = 15 * speedMultiplier;
@@ -143,6 +104,44 @@ with(inst)
 }
 
 if (gamepad_is_connected(0)) { scr_sys_controller(); }
+
+var levelWidth = 2048;
+var levelHeight = 768;
+//view follow player
+view_hborder[0] = view_wview[0] / 2;
+view_vborder[0] = view_hview[0] / 2;
+
+/*
+=======================
+    bounds checking
+=======================    
+*/
+var offsetY = height/2 + 5;
+var offsetX =  width/2 + 5;
+
+//horizontal wrapping
+if(x &gt;= levelWidth)
+{
+    view_xview[0] = 0;
+    x = offsetX;   
+}
+else if(x &lt;= 0)
+{
+    view_xview[0] = view_wview[0] * 1.5;
+    x = levelWidth - offsetX;
+}
+
+//vertical bounds
+if( levelHeight - offsetY &lt; y)
+{
+    y =  levelHeight - offsetY;
+}
+
+if(y - offsetY &lt; 0)
+{
+    y = offsetY;
+}
+
 </string>
           </argument>
         </arguments>
@@ -170,6 +169,31 @@ if (gamepad_is_connected(0)) { scr_sys_controller(); }
           <argument>
             <kind>0</kind>
             <string>-5</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="5" enumb="86">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>view_visible[0] = !view_visible[0];
+view_visible[2] = !view_visible[2];
+
+</string>
           </argument>
         </arguments>
       </action>
@@ -244,7 +268,7 @@ if (gamepad_is_connected(0)) { scr_sys_controller(); }
             <string>if(dir != 0)
 {
     dir = 0;
-    image_xscale = 1;
+    image_xscale *=-1;
 }
 </string>
           </argument>
@@ -342,114 +366,7 @@ if (gamepad_is_connected(0)) { scr_sys_controller(); }
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// DEBUG - Controller Info Stolen from Site
-// https://www.yoyogames.com/blog/75/how-to-setup-and-use-gamepads
-
-// This should really check for the index of which controller is being used...
-i = 0;
-
-// Set font colour
-draw_set_colour(c_white);
-
-if (debug_controller != 0)
-{
-    draw_text(10, 10, "Gamepad Slot :: " + string(i));
-    //draw_text(10, 20, "Gamepad Type :: " + string(gamepad_get_description(i)));
-    draw_text(10, 40, "Left H Axis :: " + string(gamepad_axis_value(i, gp_axislh)));
-    draw_text(10, 60, "Left V Axis :: " + string(gamepad_axis_value(i, gp_axislv)));
-    draw_text(10, 80, "Right H Axis :: " + string(gamepad_axis_value(i, gp_axisrh)));
-    draw_text(10, 100, "Right V Axis :: " + string(gamepad_axis_value(i, gp_axisrv)));   
-    draw_text(10, 120, "Fire Rate :: " + string(gamepad_button_value(i, gp_shoulderrb)));
-    draw_text(10, 140, "GP_UP :: " + string(gp_up));
-    draw_text(10, 160, "GP_DOWN :: " + string(gp_down));
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// DEBUG - Player Info Code
-
-// Set font colour
-draw_set_colour(c_white);
-
-if (debug_stats != 0)
-{
-    draw_text(300, 10, "dir :: " + string(dir));
-    draw_text(300, 30, "hp :: " + string(hp));
-    draw_text(300, 50, "movespeed :: " + string(movespeed));
-    draw_text(300, 70, "cash :: " + string(cash));
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Draw Self (should be last code action)
-
-draw_self();
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Player Colour Overlay
-
-// If player is fine, no colour blend
-switch (state) {
-case 'okay':
-    image_blend = -1;
-    break;
-case 'invulnerable':
-    image_blend = c_red;
-    break;
-}
-
+            <string>draw_self();
 </string>
           </argument>
         </arguments>

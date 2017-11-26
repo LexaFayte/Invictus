@@ -18,7 +18,9 @@
     <sprite>sprites\sprTorpedo</sprite>
     <sprite>sprites\explosionTorpedo</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\background0</background>
+  </backgrounds>
   <paths name="paths">
     <path>paths\testEnemyPath2</path>
     <path>paths\testEnemyPath</path>
