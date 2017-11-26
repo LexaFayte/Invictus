@@ -160,11 +160,11 @@ view_vborder[0] = view_hview[0] / 2;
     bounds checking
 =======================    
 */
-var offsetY = height/2 + 5;
-var offsetX =  width/2 + 5;
+var offsetY = abs(sprite_height)/2 + 5;
+var offsetX =  abs(sprite_width)/2 + 5;
 
 //horizontal wrapping
-if(x &gt;= levelWidth)
+if(x &gt;= room_width)
 {
     view_xview[0] = 0;
     x = offsetX;   
@@ -172,13 +172,13 @@ if(x &gt;= levelWidth)
 else if(x &lt;= 0)
 {
     view_xview[0] = view_wview[0] * 1.5;
-    x = levelWidth - offsetX;
+    x = room_width - offsetX;
 }
 
 //vertical bounds
-if( levelHeight - offsetY &lt; y)
+if( room_height - offsetY &lt; y)
 {
-    y =  levelHeight - offsetY;
+    y =  room_height - offsetY;
 }
 
 if(y - offsetY &lt; 0)
