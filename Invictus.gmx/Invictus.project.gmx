@@ -30,6 +30,7 @@
     <script>scripts\scr_sys_controller.gml</script>
     <script>scripts\scr_ship_init.gml</script>
     <script>scripts\scr_pickup_init.gml</script>
+    <script>scripts\bounds_check_and_wrap.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt01</font>
