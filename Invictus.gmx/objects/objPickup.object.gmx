@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>/// Picked up by Player
 if (health != 0) PlayerShip.hp = PlayerShip.hp_max;
-PlayerShip.cash += cashStash;
+PlayerShip.credits += cashStash;
 if (weapon != 0) PlayerShip.weapon = weapon;
 if (shield != 0) PlayerShip.shield = shield;
 
