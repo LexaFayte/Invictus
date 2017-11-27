@@ -10,6 +10,7 @@
     <sprite>sprites\sprBullet</sprite>
     <sprite>sprites\sprite2</sprite>
     <sprite>sprites\sprite3</sprite>
+    <sprite>sprites\sprite11</sprite>
     <sprite>sprites\sprPlayerShipTemplate</sprite>
     <sprite>sprites\PlayerShipA</sprite>
     <sprite>sprites\sprPickupHealth</sprite>
@@ -42,6 +43,7 @@
       <object>objects\PlayerShip</object>
       <object>objects\Enemy01</object>
       <object>objects\Enemy02</object>
+      <object>objects\object13</object>
     </objects>
     <objects name="weapons">
       <object>objects\weaponTorpedoE</object>
