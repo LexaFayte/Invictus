@@ -19,7 +19,7 @@ if (flagOn != 0)
     
     if (input != 0)
     {
-    
-    }
+    if (debug_controller != 0)
+
     
 }

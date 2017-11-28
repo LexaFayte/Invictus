@@ -38,7 +38,7 @@
     <script>scripts\scr_ship_init.gml</script>
     <script>scripts\scr_pickup_init.gml</script>
     <script>scripts\bounds_check_and_wrap.gml</script>
-    <script>scripts\scr_draw_debug_player.gml</script>
+    <script>scripts\scr_draw_debug_player0.gml</script>
     <script>scripts\SetAIPath.gml</script>
   </scripts>
   <fonts name="fonts">
