@@ -31,6 +31,14 @@ event_inherited()
 
 scr_ship_init(2, 10, weaponTorpedoE, 10);
 
+if(x &lt; 0)
+{
+    SetAIPath(true);
+}
+else
+{
+    SetAIPath(false);
+}
 
 </string>
           </argument>

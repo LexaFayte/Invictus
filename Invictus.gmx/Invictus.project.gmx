@@ -25,8 +25,12 @@
     <background>background\background0</background>
   </backgrounds>
   <paths name="paths">
-    <path>paths\testEnemyPath2</path>
-    <path>paths\testEnemyPath</path>
+    <path>paths\enemyPath01_L</path>
+    <path>paths\enemyPath02_L</path>
+    <path>paths\enemyPath03_L</path>
+    <path>paths\enemyPath01_R</path>
+    <path>paths\enemyPath02_R</path>
+    <path>paths\enemyPath03_R</path>
   </paths>
   <scripts name="scripts">
     <script>scripts\testScript.gml</script>
@@ -35,6 +39,7 @@
     <script>scripts\scr_pickup_init.gml</script>
     <script>scripts\bounds_check_and_wrap.gml</script>
     <script>scripts\scr_draw_debug_player.gml</script>
+    <script>scripts\SetAIPath.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt01</font>
