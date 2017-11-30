@@ -4,10 +4,10 @@ var pathIndex;
 
 if(spawnLeft)
 {
-    pathIndex = random_range(0,4);
+    pathIndex = irandom_range(0,4);
 }
 else
 {
-    pathIndex = random_range(4,7);
+    pathIndex = irandom_range(4,7);
 }
-path_start(pathIndex, 5, path_action_restart, false);
+path_start(pathIndex, 5, path_action_restart, true);

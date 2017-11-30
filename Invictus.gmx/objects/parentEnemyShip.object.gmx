@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>scr_ship_init(2, 6, weaponBulletE, 5);
-
+OOB_time = 0;
 /*
 hp = 2;
 movespeed = 6;
@@ -87,6 +87,23 @@ alarm[1] = movespeed;
             <string>if(hp &lt;= 0)
 {
     instance_destroy();
+    if(global.spawnPool &lt; global.POOL_MAX)
+    {
+        ++global.spawnPool;
+    }
+}
+
+if(x &lt; 0 || x &gt; room_width)
+{
+    if(OOB_time &lt; 100)
+    {
+        ++OOB_time;
+    }
+    else
+    {
+        hp = 0;
+        OOB_time = 0;
+    }
 }
 </string>
           </argument>

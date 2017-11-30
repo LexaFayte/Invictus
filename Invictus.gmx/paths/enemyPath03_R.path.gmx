@@ -6,24 +6,24 @@
   <hsnap>16</hsnap>
   <vsnap>16</vsnap>
   <points>
-    <point>2256,384,100</point>
+    <point>2096,384,100</point>
     <point>1952,384,100</point>
     <point>1808,576,100</point>
-    <point>1552,704,100</point>
+    <point>1488,608,100</point>
     <point>1232,480,100</point>
     <point>832,208,100</point>
     <point>640,80,100</point>
     <point>320,224,100</point>
-    <point>192,496,100</point>
-    <point>256,672,100</point>
+    <point>208,384,100</point>
+    <point>208,624,100</point>
     <point>624,656,100</point>
     <point>848,640,100</point>
     <point>1120,544,100</point>
     <point>1376,432,100</point>
-    <point>1696,288,100</point>
-    <point>1888,160,100</point>
-    <point>1824,80,100</point>
-    <point>1440,48,100</point>
+    <point>1712,352,100</point>
+    <point>1904,256,100</point>
+    <point>1696,96,100</point>
+    <point>1408,96,100</point>
     <point>1184,160,100</point>
     <point>880,352,100</point>
     <point>608,416,100</point>
