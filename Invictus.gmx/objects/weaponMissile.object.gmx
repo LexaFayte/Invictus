@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>// id of the instance that the missile is moving toward
 target = -1;
-movespeed = 4;
+movespeed = 7;
 range = 150;
 </string>
           </argument>
@@ -53,10 +53,35 @@ range = 150;
             <kind>1</kind>
             <string>/// Null Check
 
+/// Move toward target
+
+// Find your enemy
+if (instance_exists(parentEnemyShip)) {
+    target = instance_nearest(x, y, parentEnemyShip);
+} else {
+    target = -1;
+}
+    
+// Face the direction you are moving
+
+
+// Find your enemy
+if (instance_exists(parentEnemyShip)) {
+    target = instance_nearest(x, y, parentEnemyShip);
+}
+
+if ( (target != -1) &amp;&amp; (target != undefined) ) 
+{ 
+    move_towards_point( target.x, target.y, movespeed ); 
+    image_angle = point_direction( x, y, target.x, target.y); 
+}
+
+/*
 if ( (target == noone) || (target == undefined) || !(instance_exists(target)) )
 {
     target = -1;
 }
+*/
 </string>
           </argument>
         </arguments>
@@ -119,10 +144,7 @@ if (target == -1) &amp;&amp; (instance_nearest(x, y, parentEnemyShip) != undefin
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Move toward target
-
-if ( (target != -1) &amp;&amp; (target != undefined) ) { move_towards_point( target.x, target.y, movespeed ); }
-</string>
+            <string></string>
           </argument>
         </arguments>
       </action>
@@ -171,10 +193,11 @@ instance_destroy();
           <argument>
             <kind>1</kind>
             <string>/// DEBUG - Display range counter
-
+/*
 draw_set_font(fnt02);
 draw_set_colour(c_lime);
 draw_text(x, y, string(range));
+*/
 </string>
           </argument>
         </arguments>
