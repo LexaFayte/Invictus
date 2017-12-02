@@ -8,6 +8,7 @@ if (flagOn != 0)
 {
     var xview = view_xview[0];
     var yview = view_yview[0];
+    draw_set_font(fnt01);
     
     if (stats != 0)
     {

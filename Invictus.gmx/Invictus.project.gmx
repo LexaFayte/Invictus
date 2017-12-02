@@ -20,6 +20,8 @@
     <sprite>sprites\explosionTorpedo</sprite>
     <sprite>sprites\concept_Hud</sprite>
     <sprite>sprites\spriteWeaponIcons</sprite>
+    <sprite>sprites\sprMissile</sprite>
+    <sprite>sprites\sprPickupMissile</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -40,11 +42,14 @@
     <script>scripts\bounds_check_and_wrap.gml</script>
     <script>scripts\scr_draw_debug_player0.gml</script>
     <script>scripts\SetAIPath.gml</script>
+    <script>scripts\scr_draw_hud.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt01</font>
+    <font>fonts\fnt02</font>
   </fonts>
   <objects name="objects">
+    <object>objects\enemySpawn</object>
     <object>objects\sys_system</object>
     <objects name="ships">
       <object>objects\parentEnemyShip</object>
@@ -58,13 +63,14 @@
       <object>objects\weaponTorpedoBlast</object>
       <object>objects\weaponBulletE</object>
       <object>objects\weaponBulletP</object>
+      <object>objects\weaponMissile</object>
     </objects>
     <objects name="items">
       <object>objects\objPickup</object>
       <object>objects\pickupHealth</object>
       <object>objects\pickupCash</object>
+      <object>objects\objPickupWeaponMissile</object>
     </objects>
-    <object>objects\enemySpawn</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\TestSpaceLevel</room>

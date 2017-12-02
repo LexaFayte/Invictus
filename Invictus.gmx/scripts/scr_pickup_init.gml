@@ -6,3 +6,18 @@ cashStash   = argument1;
 weapon      = argument2;
 shield      = argument3;
 
+switch (weapon)
+{
+    case 0:
+        break;
+    case 1:
+        weapon = weaponTorpedoE;
+        break;
+    case 2:
+        weapon = weaponMissile;
+        break;
+    case 3:
+        break;
+    default:
+        break;
+}
