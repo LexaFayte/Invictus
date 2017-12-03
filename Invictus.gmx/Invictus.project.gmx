@@ -19,9 +19,9 @@
     <sprite>sprites\sprTorpedo</sprite>
     <sprite>sprites\explosionTorpedo</sprite>
     <sprite>sprites\concept_Hud</sprite>
-    <sprite>sprites\spriteWeaponIcons</sprite>
     <sprite>sprites\sprMissile</sprite>
     <sprite>sprites\sprPickupMissile</sprite>
+    <sprite>sprites\sprWeaponIcons</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -71,6 +71,7 @@
       <object>objects\pickupCash</object>
       <object>objects\objPickupWeaponMissile</object>
     </objects>
+    <object>objects\objHUD_weapon</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\TestSpaceLevel</room>

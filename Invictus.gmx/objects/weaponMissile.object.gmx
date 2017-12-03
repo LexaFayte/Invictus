@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>// id of the instance that the missile is moving toward
+index = 2;
+
 target = -1;
 movespeed = 7;
 range = 150;

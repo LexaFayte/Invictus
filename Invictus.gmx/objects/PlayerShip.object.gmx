@@ -363,7 +363,7 @@ bounds_check_and_wrap();
 // Set font colour
 draw_set_colour(c_white);
 
-scr_draw_debug_player0(1, 1, 1);
+scr_draw_debug_player0(0, 1, 1);
 </string>
           </argument>
         </arguments>
@@ -410,6 +410,38 @@ draw_set_colour(c_white);
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>/// Player Colour Overlay
+
+// If player is fine, no colour blend
+switch (state) {
+case 'okay':
+    image_blend = -1;
+    break;
+case 'invulnerable':
+    image_blend = c_red;
+    break;
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>/// Draw Self (should be last code action)
 
 draw_self();
@@ -433,18 +465,9 @@ draw_self();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Player Colour Overlay
+            <string>/// Invoke Heads Up Display
 
-// If player is fine, no colour blend
-switch (state) {
-case 'okay':
-    image_blend = -1;
-    break;
-case 'invulnerable':
-    image_blend = c_red;
-    break;
-}
-
+scr_draw_hud(1, hp, weapon, credits, 0, 0);
 </string>
           </argument>
         </arguments>
