@@ -43,6 +43,7 @@
     <script>scripts\scr_draw_debug_player0.gml</script>
     <script>scripts\SetAIPath.gml</script>
     <script>scripts\scr_draw_hud.gml</script>
+    <script>scripts\scr_enemy_spawn.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt01</font>

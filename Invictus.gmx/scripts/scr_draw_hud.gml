@@ -31,7 +31,7 @@ if (flagOn != 0)
     
             draw_set_alpha(1);
             draw_rectangle_color(xview+96, yview+672, xview+160, yview+736, c_gray, c_gray, c_gray, c_gray, false);
-            draw_set_colour(c_red);
+            draw_set_colour(c_green);
             draw_text(xview+(108), yview+(666), "HP:" )
             draw_text(xview+(108), yview+(690), string(hp) )
             
@@ -44,4 +44,8 @@ if (flagOn != 0)
             draw_text(xview+(300), yview+(690), string(credits) )
             
             draw_set_alpha(1);
+            
+            draw_set_colour(c_red);
+            draw_text(xview+(500), yview+(666), "NMEs:" )
+            if (instance_exists(parentEnemyShip)) draw_text(xview+(500), yview+(700), string(parentEnemyShip.instance_count) )
 }

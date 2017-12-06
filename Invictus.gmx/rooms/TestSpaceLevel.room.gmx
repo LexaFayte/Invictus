@@ -10,7 +10,11 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code></code>
+  <code>// This is level 99 (test purposes)
+// Set the spawn cap here
+global.level = 99;
+global.spawnCap = 500;
+scr_enemy_spawn(global.level,global.spawnCap);</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>0</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
