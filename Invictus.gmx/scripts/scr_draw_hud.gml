@@ -47,5 +47,5 @@ if (flagOn != 0)
             
             draw_set_colour(c_red);
             draw_text(xview+(500), yview+(666), "NMEs:" )
-            if (instance_exists(parentEnemyShip)) draw_text(xview+(500), yview+(700), string(parentEnemyShip.instance_count) )
+            if (instance_exists(parentEnemyShip)) draw_text(xview+(500), yview+(700), string(instance_number(parentEnemyShip)) )
 }
