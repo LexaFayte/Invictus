@@ -11,17 +11,22 @@
     <sprite>sprites\sprite2</sprite>
     <sprite>sprites\sprite3</sprite>
     <sprite>sprites\sprite11</sprite>
+    <sprite>sprites\sprCargo</sprite>
     <sprite>sprites\sprPlayerShipTemplate</sprite>
     <sprite>sprites\PlayerShipA</sprite>
     <sprite>sprites\sprPickupHealth</sprite>
     <sprite>sprites\sprPickupCash</sprite>
+    <sprite>sprites\sprPickupShield</sprite>
     <sprite>sprites\sprPlaceholder</sprite>
     <sprite>sprites\sprTorpedo</sprite>
     <sprite>sprites\explosionTorpedo</sprite>
     <sprite>sprites\concept_Hud</sprite>
     <sprite>sprites\sprMissile</sprite>
     <sprite>sprites\sprPickupMissile</sprite>
+    <sprite>sprites\sprPickupIon</sprite>
     <sprite>sprites\sprWeaponIcons</sprite>
+    <sprite>sprites\sprIon</sprite>
+    <sprite>sprites\sprShieldOrb</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -44,6 +49,7 @@
     <script>scripts\SetAIPath.gml</script>
     <script>scripts\scr_draw_hud.gml</script>
     <script>scripts\scr_enemy_spawn.gml</script>
+    <script>scripts\scr_drop_item.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt01</font>
@@ -57,22 +63,28 @@
       <object>objects\PlayerShip</object>
       <object>objects\Enemy01</object>
       <object>objects\Enemy02</object>
+      <object>objects\Enemy00</object>
       <object>objects\object13</object>
     </objects>
     <objects name="weapons">
+      <object>objects\parentWeaponEnemy</object>
+      <object>objects\weaponBulletE</object>
       <object>objects\weaponTorpedoE</object>
       <object>objects\weaponTorpedoBlast</object>
-      <object>objects\weaponBulletE</object>
       <object>objects\weaponBulletP</object>
       <object>objects\weaponMissile</object>
+      <object>objects\weaponIon</object>
     </objects>
     <objects name="items">
       <object>objects\objPickup</object>
       <object>objects\pickupHealth</object>
       <object>objects\pickupCash</object>
+      <object>objects\pickupShield</object>
       <object>objects\objPickupWeaponMissile</object>
+      <object>objects\objPickupWeaponIon</object>
     </objects>
     <object>objects\objHUD_weapon</object>
+    <object>objects\objShieldOrb</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\TestSpaceLevel</room>

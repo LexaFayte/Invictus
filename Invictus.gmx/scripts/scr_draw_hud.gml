@@ -37,7 +37,9 @@ if (flagOn != 0)
             
             draw_rectangle_color(xview+224, yview+672, xview+254, yview+702, c_gray, c_gray, c_gray, c_gray, false);
             draw_sprite(sprWeaponIcons, weapon_sprite, xview+(224), yview+(672))
-
+            draw_set_colour(c_gray)
+            draw_text(xview+(224), yview+(710), "WeapCharj: " + string(alarm[0]) )
+            
             draw_rectangle_color(xview+300, yview+672, xview+382, yview+736, c_gray, c_gray, c_gray, c_gray, false);
             draw_set_colour(c_blue);
             draw_text(xview+(300), yview+(666), "Cred:" )
@@ -48,4 +50,6 @@ if (flagOn != 0)
             draw_set_colour(c_red);
             draw_text(xview+(500), yview+(666), "NMEs:" )
             if (instance_exists(parentEnemyShip)) draw_text(xview+(500), yview+(700), string(instance_number(parentEnemyShip)) )
+            
+            
 }

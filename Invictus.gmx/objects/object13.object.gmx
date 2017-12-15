@@ -29,7 +29,7 @@
 
 event_inherited()
 
-scr_ship_init(2, 10, weaponTorpedoE, 10);
+scr_ship_init(2, 10, weaponTorpedoE, 0);
 
 if(x &lt; 0)
 {

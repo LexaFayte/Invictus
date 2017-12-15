@@ -31,7 +31,9 @@ hp = 10;
 hp_max = 10;
 movespeed = 30;
 weapon = weaponBulletP;
+weaponDelay = 0;
 state = 'okay';
+shield = 0;
 credits = 0;
 invulnerability_timer = 3; // seconds
 
@@ -48,6 +50,26 @@ debug_enable = 1;
 width = 32;
 height = 32;
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
@@ -97,10 +119,13 @@ if (state == 'invulnerable')
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var bulletDir = dir;//dirction of ths ship currently
+            <string>///Firing Code
+
+var bulletDir = dir;//dirction of ths ship currently
 var speedMultiplier;//multiplier for bullet directional speed
 var xMod;//modifies the spawn position of the bullet x pos
 var yMod = 16;//modifies the spwan position of the bullet y pos
+
 
 if(dir == 0 || dir == 1)
 {
@@ -120,6 +145,35 @@ with(inst)
 {
     speed = 15 * speedMultiplier;
     direction = bulletDir;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (shield == 1)
+{
+    if (!instance_exists(objShieldOrb))
+        {
+            instance_create(x, y, objShieldOrb);
+        }
 }
 </string>
           </argument>
@@ -335,7 +389,10 @@ bounds_check_and_wrap();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (alarm[0] == -1) alarm = 3;
+            <string>if (alarm[0] == -1) 
+{
+     alarm[0] = (3);
+}
 </string>
           </argument>
         </arguments>

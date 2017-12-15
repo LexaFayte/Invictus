@@ -12,11 +12,15 @@ switch (weapon)
         break;
     case 1:
         weapon = weaponTorpedoE;
+        weaponDelay = 6;
         break;
     case 2:
         weapon = weaponMissile;
+        weaponDelay = 9;
         break;
     case 3:
+        weapon = weaponIon;
+        weaponDelay = 12;
         break;
     default:
         break;

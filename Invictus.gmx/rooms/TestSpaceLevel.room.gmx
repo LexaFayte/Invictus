@@ -65,8 +65,13 @@ scr_enemy_spawn(global.level,global.spawnCap);</code>
     <instance objName="pickupHealth" x="736" y="224" name="inst_67510506" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="enemySpawn" x="2272" y="352" name="inst_03A7E1ED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objPickupWeaponMissile" x="1152" y="448" name="inst_CB65C593" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objPickupWeaponIon" x="1056" y="544" name="inst_CF447A25" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pickupShield" x="1056" y="352" name="inst_115F980B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
-  <tiles/>
+  <tiles>
+    <tile bgName="" x="928" y="416" w="16" h="16" xo="0" yo="0" id="10000002" name="inst_5A147CE5" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="" x="896" y="448" w="16" h="16" xo="0" yo="0" id="10000003" name="inst_7CB295B6" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+  </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>
   <PhysicsWorldLeft>0</PhysicsWorldLeft>
