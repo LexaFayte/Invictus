@@ -59,8 +59,6 @@ if (flagOn != 0)
             if (credits >= levelThreshold[level])
             {
                 var v_spr_lvHP = draw_sprite(sprLevelIcons, 1, xview+(700), yview+(672))
-                v_spr_lvHP.image_xscale = 2;
-                v_spr_lvHP.image_yscale = 2;
                 draw_sprite(sprLevelIcons, 2, xview+(750), yview+(672))
                 draw_sprite(sprLevelIcons, 3, xview+(800), yview+(672))
             }
