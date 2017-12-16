@@ -25,30 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///set creation vars
-dir = 0;
-hp = 10;
-hp_max = 10;
-movespeed = 30;
-weapon = weaponBulletP;
-weaponDelay = 0;
-state = 'okay';
-shield = 0;
-credits = 0;
-invulnerability_timer = 3; // seconds
+            <string>/// Declare array for Level Threshold
 
-gp_up = 0;
-gp_down = 0;
-
-
-// Set these to 0 to disable debug text
-debug_enable = 1;
-    debug_controller = 1;
-    debug_stats = 1;
-
-//sprite height and width
-width = 32;
-height = 32;
+levelThreshold[0] = 500;
+levelThreshold[1] = 1000;
+levelThreshold[2] = 1500;
+levelThreshold[3] = 2000;
+levelThreshold[4] = 2500;
+levelThreshold[5] = 3000;
+levelThreshold[6] = 3500;
+levelThreshold[7] = 50000;
 </string>
           </argument>
         </arguments>
@@ -69,7 +55,33 @@ height = 32;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>///set creation vars
+dir = 0;
+level = 0;
+nextLevel = levelThreshold[level];
+hp = 10;
+hp_max = 10;
+movespeed = 5;
+weapon = weaponBulletP;
+weaponDelay = 0;
+state = 'okay';
+shield = 0;
+credits = 0;
+invulnerability_timer = 3; // seconds
+
+gp_up = 0;
+gp_down = 0;
+
+
+// Set these to 0 to disable debug text
+debug_enable = 1;
+    debug_controller = 1;
+    debug_stats = 1;
+
+//sprite height and width
+width = 32;
+height = 32;
+</string>
           </argument>
         </arguments>
       </action>
@@ -168,7 +180,23 @@ with(inst)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (shield == 1)
+            <string>// Level-up check
+if (level == 1) &amp;&amp; (credits &gt;= 500)
+{}
+if (level == 2) &amp;&amp; (credits &gt;= 2500)
+{}
+if (level == 3) &amp;&amp; (credits &gt;= 5000)
+{}
+if (level == 4) &amp;&amp; (credits &gt;= 1000)
+{}
+if (level == 5) &amp;&amp; (credits &gt;= 500)
+{}
+if (level == 6) &amp;&amp; (credits &gt;= 500)
+{}
+
+// Shield check
+
+if (shield == 1)
 {
     if (!instance_exists(objShieldOrb))
         {

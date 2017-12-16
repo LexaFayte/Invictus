@@ -27,6 +27,7 @@
     <sprite>sprites\sprWeaponIcons</sprite>
     <sprite>sprites\sprIon</sprite>
     <sprite>sprites\sprShieldOrb</sprite>
+    <sprite>sprites\sprLevelIcons</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -50,6 +51,7 @@
     <script>scripts\scr_draw_hud.gml</script>
     <script>scripts\scr_enemy_spawn.gml</script>
     <script>scripts\scr_drop_item.gml</script>
+    <script>scripts\scr_level_up.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt01</font>
