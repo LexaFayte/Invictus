@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>parentWeaponAll</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>index = 3;
+            <string>event_inherited();
+
+index = 3;
 delay = 15;
 
 enlarge = 1;
@@ -60,7 +62,7 @@ if (enlarge &gt;= 10) { instance_destroy(); }
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="parentWeaponEnemy">
+    <event eventtype="4" ename="parentWeaponAll">
       <action>
         <libid>1</libid>
         <id>603</id>

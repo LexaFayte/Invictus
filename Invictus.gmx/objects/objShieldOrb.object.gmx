@@ -48,15 +48,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>life -= 1;
+            <string>// Reduce shield life per step
+life -= 1;
 
+// Block enemy projectile
 if (place_meeting(x, y, parentWeaponEnemy))
 {
     var block = (instance_place(x, y, parentWeaponEnemy));
     with (block)
-    instance_destroy();
+        instance_destroy();
 }
 
+// When shield expires
 if (life &lt;= 0) 
 {
     if (instance_exists(PlayerShip))
@@ -89,10 +92,12 @@ if (life &lt;= 0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (instance_exists(PlayerShip))
+            <string>// Block enemy projectile
+if (place_meeting(x, y, parentWeaponEnemy))
 {
-    x = PlayerShip.x;
-    y = PlayerShip.y;
+    var block = (instance_place(x, y, parentWeaponEnemy));
+    with (block)
+        instance_destroy();
 }
 </string>
           </argument>
@@ -121,6 +126,33 @@ if (life &lt;= 0)
     instance_destroy();
 }
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="72">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (instance_exists(PlayerShip))
+{
+    x = PlayerShip.x;
+    y = PlayerShip.y;
+}
 </string>
           </argument>
         </arguments>

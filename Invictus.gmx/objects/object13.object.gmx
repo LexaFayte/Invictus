@@ -27,9 +27,11 @@
             <kind>1</kind>
             <string>/// Inherit Base Enemy Stats and Set Own Stats
 
-event_inherited()
+hp = 10;
+movespeed = 9;
+weapon = -1;
 
-scr_ship_init(2, 10, weaponTorpedoE, 0);
+event_inherited()
 
 if(x &lt; 0)
 {

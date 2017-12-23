@@ -5,5 +5,6 @@
 hp          = argument0;
 movespeed   = argument1;
 weapon      = argument2;
-
 shield      = argument3;
+
+impact = 3;

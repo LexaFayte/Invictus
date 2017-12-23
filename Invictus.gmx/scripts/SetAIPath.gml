@@ -10,4 +10,4 @@ else
 {
     pathIndex = random_range(4,7);
 }
-path_start(pathIndex, 5, path_action_restart, false);
+path_start(pathIndex, movespeed, path_action_restart, false);

@@ -27,7 +27,10 @@
             <kind>1</kind>
             <string>/// Inherit Base Enemy Stats
 
+
 event_inherited()
+
+scr_ship_init(2, 8, weaponBulletE, 0);
 
 if(x &lt; 0)
 {

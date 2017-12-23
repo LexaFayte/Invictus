@@ -62,6 +62,7 @@ if (flagOn != 0)
                 draw_sprite(sprLevelIcons, 2, xview+(750), yview+(672))
                 draw_sprite(sprLevelIcons, 3, xview+(800), yview+(672))
             }
-            
+            draw_set_colour(c_white);
+            draw_text(xview+(800), yview+(666), "Paused:" + string(global.paused) )
             
 }

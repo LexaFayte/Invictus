@@ -28,6 +28,7 @@
     <sprite>sprites\sprIon</sprite>
     <sprite>sprites\sprShieldOrb</sprite>
     <sprite>sprites\sprLevelIcons</sprite>
+    <sprite>sprites\icon_system</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -58,18 +59,21 @@
     <font>fonts\fnt02</font>
   </fonts>
   <objects name="objects">
-    <object>objects\enemySpawn</object>
     <object>objects\sys_system</object>
     <objects name="ships">
+      <object>objects\enemySpawn</object>
       <object>objects\parentEnemyShip</object>
       <object>objects\PlayerShip</object>
+      <object>objects\Enemy00</object>
       <object>objects\Enemy01</object>
       <object>objects\Enemy02</object>
-      <object>objects\Enemy00</object>
-      <object>objects\object13</object>
+      <object>objects\Enemy03</object>
     </objects>
     <objects name="weapons">
+      <object>objects\parentWeaponAll</object>
       <object>objects\parentWeaponEnemy</object>
+      <object>objects\parentWeaponPlayer</object>
+      <object>objects\parentWeaponWorld</object>
       <object>objects\weaponBulletE</object>
       <object>objects\weaponTorpedoE</object>
       <object>objects\weaponTorpedoBlast</object>
